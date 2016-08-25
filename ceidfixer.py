@@ -45,6 +45,8 @@ def get_exposed_val(stylestr):
 
 
 def get_var_from_description(desctxt, varname):
+    """Extract structure variable (eg name, exposed) from CDATA (description) in point placemark"""
+    # TODO: finish code for this
     VARS = ["name", "crater field", "class", "region", "country",
             "diameter", "position", "age", "drilled", "exposed"]
     assert varname.lower() in VARS, \
