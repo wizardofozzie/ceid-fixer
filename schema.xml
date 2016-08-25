@@ -1,0 +1,60 @@
+<Folder>
+    <name>(5) unnamed (24.0391, -5.8886), Mali</name>
+    <LookAt>
+        <longitude>-5.888123371025841</longitude>
+        <latitude>24.03948759424782</latitude>
+        <altitude>0</altitude>
+        <heading>42.04122612574527</heading>
+        <tilt>37.16968448655342</tilt>
+        <range>4675.381386120808</range>
+        <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+    </LookAt>
+    <S_Impact_database_2010_1_SSSSSSSSSSSSSSSSSSSSSSSSSSSSS>
+        <name>unnamed (24.0391, -5.8886)</name>
+        <description><![CDATA[Class = 5<br>Inherited_class = -<br>Structure_name = unnamed (24.0391, -5.8886)<br>Crater_field = -<br>Region_2 = -<br>Country = Mali<br>Continent_Ocean = Africa<br>Lat = 24.0391<br>Lon = -5.8886<br>Diameter_final_rim_km = -<br>Diameter_present_day_km = 2.37 x 3.31<br>Diameter_outer_limit_of_deformation_km = -<br>Diameter_km = 2.37 x 3.31<br>DiameterSQL_km = 3<br>Age_Ma = ?<br>Younger_age_limit_Ma = -<br>Best_age_Ma = -<br>Older_age_limit_Ma = -<br>Age_uncert_Ma = -<br>Age_uncert_type = -<br>Overburden_m = -<br>Present_water_depth_m = -<br>Drilled = -<br>Target = -<br>Target_water_depth_m = -<br>Impactor = -<br>Notes = Elliptical depression with a lake sediments. Bedrock exposure patterns in the surrounding area strongly suggests this is a core of a fold. Observations in Google Earth. Reported by F.J. and J.F. Hernández (2010).<br>Updated_on = 8/Jan/10<br>Compiled_by = D. Rajmon, J.F. Hernández, F.J. Hernández<br>]]></description>
+        <LookAt>
+            <longitude>-5.888606796591368</longitude>
+            <latitude>24.03904608847057</latitude>
+            <altitude>0</altitude>
+            <heading>-0.0001969081127213866</heading>
+            <tilt>0</tilt>
+            <range>4674.716448126387</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+        </LookAt>
+        <styleUrl>#msn_pm_exposed_impact10</styleUrl>
+        <Point>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <coordinates>-5.888599999999988,24.03910000000001,177</coordinates>
+        </Point>
+        <Class>5</Class>
+        <Inherited_class>-</Inherited_class>
+        <Structure_name>unnamed (24.0391, -5.8886)</Structure_name>
+        <Crater_field>-</Crater_field>
+        <Region_2>-</Region_2>
+        <Country>Mali</Country>
+        <Continent_Ocean>Africa</Continent_Ocean>
+        <Lat>24.0391</Lat>
+        <Lon>-5.8886</Lon>
+        <Diameter_final_rim_km>-</Diameter_final_rim_km>
+        <Diameter_present_day_km>2.37 x 3.31</Diameter_present_day_km>
+        <Diameter_outer_limit_of_deformation_km>-</Diameter_outer_limit_of_deformation_km>
+        <Diameter_km>2.37 x 3.31</Diameter_km>
+        <DiameterSQL_km>3</DiameterSQL_km>
+        <Age_Ma>?</Age_Ma>
+        <Younger_age_limit_Ma>-</Younger_age_limit_Ma>
+        <Best_age_Ma>-</Best_age_Ma>
+        <Older_age_limit_Ma>-</Older_age_limit_Ma>
+        <Age_uncert_Ma>-</Age_uncert_Ma>
+        <Age_uncert_type>-</Age_uncert_type>
+        <Overburden_m>-</Overburden_m>
+        <Present_water_depth_m>-</Present_water_depth_m>
+        <Drilled>-</Drilled>
+        <Target>-</Target>
+        <Target_water_depth_m>-</Target_water_depth_m>
+        <Impactor>-</Impactor>
+        <Notes>Elliptical depression with a lake sediments. Bedrock exposure patterns in the surrounding area strongly suggests this is a core of a fold. Observations in Google Earth. Reported by F.J. and J.F. Hernández (2010).</Notes>
+        <Updated_on>8/Jan/10</Updated_on>
+        <Compiled_by>D. Rajmon, J.F. Hernández, F.J. Hernández</Compiled_by>
+    </S_Impact_database_2010_1_SSSSSSSSSSSSSSSSSSSSSSSSSSSSS>
+</Folder>

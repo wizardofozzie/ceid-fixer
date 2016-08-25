@@ -1,0 +1,71 @@
+<Folder>
+    <name>(0) Liverpool, Australia</name>
+    <LookAt>
+        <longitude>134.0479419734496</longitude>
+        <latitude>-12.39443664803733</latitude>
+        <altitude>0</altitude>
+        <heading>-2.532415544588105</heading>
+        <tilt>47.7665448415836</tilt>
+        <range>4463.439708489892</range>
+        <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+    </LookAt>
+    <Placemark>
+        <name>Liverpool</name>
+        <description><![CDATA[<HTML><BODY><B>Name:</B> Liverpool<br><B>Class: </B>1<BR><B>Crater Field: </B>-<BR><b>Region: </B>Northern Territory<BR><B>Country: </B>Australia (Australia)<BR><B>Diameter: </B>2 km<BR><B>Position: </B>-12.3959, 134.0474<BR><B>Age: </B>Neoproterozoic?<BR><B>Drilled?: </B>N<BR><B>Exposed?: </B><p><B>Description:</B><BR>Simple structure in flat-lying Paleoproterozoic and Neoproterozoic sandstones in a swampy flood plain of the Liverpool river. It is marked by a ring of breccia rising up to 50 m above terrain (Guppy et al., 1971; Shoemaker et al., 2005). Present day (apparent) diameter of 1.6 km is defined by the contact of the allogenic breccia with the target rock. Erosion removed the original estimated 100-200 m high and ~2 km diameter rim (Shoemaker et al., 2005). Guppy et al. (1971) noted that the sandstone filling the structure is similar to the Cretaceous sandstone occuring widely in the area and suggested that the age of the structure was between Proterozoic and Cretaceous. Shoemaker et al. (2005) pointed out that the crater-fill units at Liverpool appear similar to the basal units of the Late Neoproterozoic Buckingham Bay Sandstone. This sandstone appears in outcrops ~2 km from the structure and directly overlies the target Neoproterozoic sandstones. Considering fairly good preservation of the structure, Shoemaker et al. (2005) prefferred Neoproterozoic age for the structure. EID (2009) listed 150 ± 70 Ma age without a reference. Guppy et al. (1971) reported quartz from the allogenic breccias with mosaicism and planar elements decorated with fluid inclusions but showed no data to support the shock origin and did not mention whether the orientation of the planar features was measured or any other description.  Although the overall geologic character strongly indicates impact origin, the shock evidence have not been documented in peer-reviewed literature and the structure is classified accordingly. Neoproterozoic age is calibrated with Gradstein et al. (2006). Aboriginal name for the structure is Yingundji (Shoemaker and Shoemaker, 1997).
+<P>
+<img src="http://www.exploroz.com/images/places/80995_2__TN800x600.jpg" WIDTH="400" HEIGHT="219">
+<P>
+<P>----------------<P>
+Liverpool is a meteorite impact crater situated in Arnhem Land within the Northern Territory, Australia.[1] It was named after the nearby Liverpool River. Liverpool is remote and difficult to access. The crater has a raised, near-circular rim averaging about 1.6 km in diameter. It was first noticed by geologists during reconnaissance geological mapping in the 1960s, and although an impact origin was considered possible, this was not confirmed until a more detailed study was undertaken in 1970. [2][3]
+<P>
+The crater lies within flat-lying Paleoproterozoic sandstone of the McArthur Basin. This sandstone has been fractured and brecciated by the impact event to form the rim. Flat-lying and non-deformed sandstone that must have been deposited after the impact event is exposed within the crater's center. Because the crater is quite well preserved, it can be argued that it was buried by younger sedimentary rock soon after the impact event; this younger rock has now been mostly eroded away except in the crater center. The crater-filling sandstone was originally thought to be of Cretaceous age,[2] leading to the Cretaceous age listed for the crater in older literature sources. But more recent studies suggest that the infilling rock is more likely to be of Neoproterozoic age (1000-543 Ma),[3][4][5] and therefore the crater is more likely to have formed at some time during the Neoproterozoic.
+<P>
+No meteorite fragments have been found at the site. This is not surprising considering its great age; such fragments would have weathered away. Evidence supporting an impact origin includes the geological structure of the crater, and the discovery of shocked quartz.[2] The crater is not perfectly circular, but is about 6% broader in a northeast-southwest direction. And the internal parts of the crater are asymmetric in such a way as to imply that the impact was oblique from the southwest.[5]
+
+<!--
+References:
+
+EID (2009) Earth Impact Database.  13 April 2009. http://www.unb.ca/passc/ImpactDatabase
+
+Gradstein F. M., Ogg J. G. and Smith A. G. (2006) A geologic time scale 2004.  Cambridge, UK: Cambridge University Press. 589 p.
+
+Guppy D. J., Brett R. and Milton D. J. (1971) Liverpool and Strangways Craters, Northern Territory: Two structures of probable impact origin. Journal of Geophysical Research 76(23):5387-5393.
+
+Shoemaker E. M., Macdonald F. A. and Shoemaker C. S. (2005) Geology of five small Australian impact craters. Australian Journal of Earth Sciences 52(4-5):529-544. http://journalsonline.tandf.co.uk/link.asp?id=t2n7222127867711
+
+Shoemaker E. M. and Shoemaker C. S. (1997) Notes on the geology of Liverpool crater, Northern Territory, Australia (abstract). Lunar and Planetary Science XXVIII:#1662. http://www.lpi.usra.edu/meetings/lpsc97/pdf/1662.PDF
+-->
+<P></BODY></HTML>]]></description>
+        <LookAt>
+            <longitude>134.0475390148736</longitude>
+            <latitude>-12.39549126725057</latitude>
+            <altitude>0</altitude>
+            <heading>-1.179870900337533e-005</heading>
+            <tilt>0</tilt>
+            <range>6209.82344068858</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+        </LookAt>
+        <styleUrl>#sn_pm_exposed_impact_01_01_01_0_0300</styleUrl>
+        <Point>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <coordinates>134.047703294653,-12.39527715471481,83.00000000000003</coordinates>
+        </Point>
+    </Placemark>
+    <Placemark>
+        <open>1</open>
+        <styleUrl>#sn_icon740</styleUrl>
+        <Polygon>
+            <outerBoundaryIs>
+                <LinearRing>
+                    <coordinates>
+                        134.042500195218,-12.3901953241653,0 134.041147037781,-12.3920143164401,0 134.040435600294,-12.394152686332,0 134.040435537615,-12.3964011204104,0 134.041146873685,-12.3985395262854,0 134.042499992385,-12.4003585767819,0 134.044362446538,-12.4016802022923,0 134.046551920655,-12.4023750246302,0 134.048854079345,-12.4023750246302,0 134.051043553462,-12.4016802022923,0 134.052906007615,-12.4003585767819,0 134.054259126315,-12.3985395262854,0 134.054970462385,-12.3964011204104,0 134.054970399706,-12.394152686332,0 134.054258962219,-12.3920143164401,0 134.052905804782,-12.3901953241653,0 134.051043389367,-12.3888737568767,0 134.048854016666,-12.3881789705218,0 134.046551983334,-12.3881789705218,0 134.044362610633,-12.3888737568767,0 134.042500195218,-12.3901953241653,0
+                    </coordinates>
+                </LinearRing>
+            </outerBoundaryIs>
+        </Polygon>
+    </Placemark>
+    <Point>
+<coordinates>134.05,-12.4,0</coordinates>
+</Point>
+</Folder>
