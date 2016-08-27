@@ -28,50 +28,57 @@ def get_fldr_vars(kfldr):
 
 def get_class_val(namefield):
     """Get structure's class (ranking) from FOLDER's name value"""
-    d = {0: '0or1', 1: '0or1', 2: '2', 3: '3', 4: '4or5', 5: '4or5',}
-    assert RE_KLASS.match(namefield), "Name field must be a string of format:\t '(klass) Name'"
+    d = {
+        0: '0or1', 1: '0or1', 2: '2',
+        3: '3', 4: '4or5', 5: '4or5',
+        }
+    assert RE_KLASS.match(namefield), \
+        "Name field must be a string of format:\t '(klass) Name'"
     return d.get(int(namefield[1:2]), "6")
 
 
 def get_exposed_from_styleurl(stylestr):
     """Retrieve structure's exposed status from icon placemark styleUrl"""
     assert RE_STYLEURL.match(stylestr), "Style string must be of format:\t '#foo_bar'"
-    # if not RE_STYLEURL_EXPOSED.match(stylestr) or not RE_STYLEURL_UNEXPOSED.match(stylestr):
-    #     raise Exception("Weird incoming naming convention")
     if RE_STYLEURL_EXPOSED.match(stylestr): 
         return "exposed"
     elif RE_STYLEURL_UNEXPOSED.match(stylestr):
         return "unexposed"
-    else:
-        # TODO: parse HTML
-        return "other"
+    # else:
+    #     # TODO: parse HTML
+    #     return "other"
 
 
 def get_var_from_description(cdata, varname):
     """Extract structure variable (eg name, exposed) from CDATA (description) in point placemark"""
-    
-    # TODO: finish code for this
-    VARS = ["name", "crater field", "class", "region", "country",
-            "diameter", "position", "age", "drilled", "exposed"]
+    VARS = [
+        "name", "crater field", "class", "region", "country",
+        "diameter", "position", "age", "drilled", "exposed"
+        ]
+    assert cdata.startswith('CDATA'), "Not a CDATA field"
     assert varname.lower() in VARS, \
         "varname {} needs to be in {}".format(varname, ", ".join(VARS))
-    assert cdata.startswith('CDATA'), "Not a CDATA field"
-    l = [x for x in re.split(r':|: | (</B>)? ?', cdata) if x is not None]
 
-    # make a list of html tags
-    #TAGS_OPEN, TAGS_CLOSE = re.findall(RE_HTML_OPEN, cdata), re.findall(RE_HTML_CLOSE, cdata)
-    #TAGS_ALL = TAGS_OPEN + TAGS_CLOSE
-    
-    #test_str = u"<B>Name:</B> TheName"
-    # partition at ": "
-    
-    
-    if varname.lower() in cdata.lower(): 
-        # get html tags in cdata
+    # TODO: finish code for this
+    # strip html tags
+    cdata = re.sub(
+        r'(<b>)|(</b>)|(</B>)|(<B>)|(<HTML>)|(<BODY>)',
+        '', cdata, 0, re.I
+    )
+    # make <br> => <BR> and <p> => <P>
+    cdata = re.sub(r'<br>', r'<BR>', cdata)
+    cdata = re.sub(r'<p>', r'<P>', cdata)
+    # split at html <br>/<p> into list
+    l = [x for x in re.split('(<BR>)|(<P>)', cdata, re.I) if x is not None]
 
-        # find position of varname... assume "varname: </B>"
-        posn = cdata.lower().find(varname.lower()) + len(varname+": ")
-        # 
+
+    # ['Name: Liverpool',
+    #  '<br>',
+    #  'Class: 1<BR>Crater Field: -<BR>Region: Northern Territory<BR>Country: Australia (Australia)<BR>Diameter: 2 km<BR>Position:
+    # -12.3959, 134.0474<BR>Age: Neoproterozoic?<BR>Drilled?: N<BR>Exposed?: ',
+    #  '<p>',
+    #  'Description:<BR>Simple structure in flat-lying Paleoproterozoic and Neoproterozoic sandstones in a swampy flood plain of th
+
 
 def get_placemark_type(pm):
     """Determine whether fastkml Placemark object is for KML icon or polygon"""
