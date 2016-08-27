@@ -11,6 +11,9 @@ RE_HTML_OPEN = re.compile(r"<[a-z0-9 ]{1,12}>", re.I)
 RE_HTML_CLOSE = re.compile(r"</[a-z0-9 ]{1,12}>", re.I)
 RE_CDATA_FIELD = re.compile(r'((<B>)?(crater field|class|region|country|diameter|position|age|drilled|exposed|references)(:|: )</B> *?)(?P<data>[A-Z0-9-]{1}[a-z0-9]*)(<br>)?', re.I)
 
+# TODO fix
+RE_TAGGED_DATA = re.compile(r"(?P<starttag><(?P<tagname>[a-zA-Z0-9])[^>]*>)(?P<data>.*)(?P<endtag></?[a-zA-Z0-9]>)")
+
 
 def get_fldr_vars(kfldr):
     """Parse fastkml structure fldr for: structure name, class and exposed"""
@@ -138,6 +141,4 @@ def get_feat_list(struct, names=False):
     return fl if not names else dictcomp
 
 get_features = get_feat_list
-
-
 
