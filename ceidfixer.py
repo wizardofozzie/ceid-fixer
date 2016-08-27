@@ -7,6 +7,9 @@ RE_STYLEURL = re.compile("^#\w+")
 RE_STYLEURL_EXPOSED = re.compile(r'^#.*?(?<!un)exposed.+')
 RE_STYLEURL_UNEXPOSED = re.compile("^#.*?exposed.+")
 RE_KLASS = re.compile("^\([0-5]\) .+")
+RE_HTML_OPEN = re.compile(r"<[a-z0-9 ]{1,12}>", re.I)
+RE_HTML_CLOSE = re.compile(r"</[a-z0-9 ]{1,12}>", re.I)
+RE_CDATA_FIELD = re.compile(r'((<B>)?(crater field|class|region|country|diameter|position|age|drilled|exposed|references)(:|: )</B> *?)(?P<data>[A-Z0-9-]{1}[a-z0-9]*)(<br>)?', re.I)
 
 
 def get_fldr_vars(kfldr):
@@ -18,7 +21,7 @@ def get_fldr_vars(kfldr):
     # find FLDR>Placemark which is for our icon
     for pm in get_feat_list(kfldr):
         if str(get_placemark_type(pm)) == 'point':
-            exposed = get_exposed_val(pm.styleUrl)
+            exposed = get_exposed_from_styleurl(pm.styleUrl)
             name = pm.name
     return dict(name=name, exposed=exposed, klass=klass)
 
@@ -30,7 +33,7 @@ def get_class_val(namefield):
     return d.get(int(namefield[1:2]), "6")
 
 
-def get_exposed_val(stylestr):
+def get_exposed_from_styleurl(stylestr):
     """Retrieve structure's exposed status from icon placemark styleUrl"""
     assert RE_STYLEURL.match(stylestr), "Style string must be of format:\t '#foo_bar'"
     # if not RE_STYLEURL_EXPOSED.match(stylestr) or not RE_STYLEURL_UNEXPOSED.match(stylestr):
@@ -44,16 +47,31 @@ def get_exposed_val(stylestr):
         return "other"
 
 
-def get_var_from_description(desctxt, varname):
+def get_var_from_description(cdata, varname):
     """Extract structure variable (eg name, exposed) from CDATA (description) in point placemark"""
+    
     # TODO: finish code for this
     VARS = ["name", "crater field", "class", "region", "country",
             "diameter", "position", "age", "drilled", "exposed"]
     assert varname.lower() in VARS, \
         "varname {} needs to be in {}".format(varname, ", ".join(VARS))
-    assert desctxt.startswith('CDATA'), "Not a CDATA field"
-    
+    assert cdata.startswith('CDATA'), "Not a CDATA field"
+    l = [x for x in re.split(r':|: | (</B>)? ?', cdata) if x is not None]
 
+    # make a list of html tags
+    #TAGS_OPEN, TAGS_CLOSE = re.findall(RE_HTML_OPEN, cdata), re.findall(RE_HTML_CLOSE, cdata)
+    #TAGS_ALL = TAGS_OPEN + TAGS_CLOSE
+    
+    #test_str = u"<B>Name:</B> TheName"
+    # partition at ": "
+    
+    
+    if varname.lower() in cdata.lower(): 
+        # get html tags in cdata
+
+        # find position of varname... assume "varname: </B>"
+        posn = cdata.lower().find(varname.lower()) + len(varname+": ")
+        # 
 
 def get_placemark_type(pm):
     """Determine whether fastkml Placemark object is for KML icon or polygon"""
@@ -74,7 +92,7 @@ def create_styleurl(pm, **kwargs):
     assert isinstance(pm, (kml.Placemark, kml.Folder)), "Not a fastkml placemark/folder"
     klass = kwargs.get("klass") #or get_class_val(pm)
     if get_placemark_type(pm) == "point":
-        exposed = kwargs.get("exposed") or get_exposed_val(pm.styleUrl)
+        exposed = kwargs.get("exposed") or get_exposed_from_styleurl(pm.styleUrl)
         return "#style_pm_{}_class{}".format(exposed, klass)
     elif get_placemark_type(pm) == "polygon":
         return "#class{}".format(klass)
@@ -101,6 +119,7 @@ def create_styleurl(pm, **kwargs):
 # fastkml functions
 
 def get_feat_list(struct, names=False):
+    """Return a list of features in a fastkml object"""
     if isinstance(struct, list): 
         if len(struct) == 1 and isinstance(struct[0], kml.Document):
             return get_feat_list(struct[0], names)
